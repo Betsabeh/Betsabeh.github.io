@@ -13,16 +13,26 @@
             color: #333;  
         }  
         header {  
-            background-color: white;  
-            padding: 20px;  
             display: flex;  
             justify-content: space-between;  
             align-items: center;  
+            background-color: white;  
+            padding: 20px;  
             border-bottom: 1px solid #ccc;  
         }  
         h1 {  
             color: #7a2c38;  
             font-size: 2.5em;  
+            margin: 0;  
+        }  
+        nav {  
+            display: flex;  
+        }  
+        nav a {  
+            margin-left: 20px;  
+            text-decoration: none;  
+            color: #7a2c38;  
+            font-weight: bold;  
         }  
         .btn {  
             background-color: #7a2c38;  
@@ -50,9 +60,11 @@
 <header>  
     <h1>BT</h1>  
     <nav>  
-        <a href="#research" class="btn">Research Interests</a>  
-        <a href="#publications" class="btn">Publications</a>  
-        <a href="#teaching" class="btn">Teaching</a>  
+        <a href="#about">About Me</a>  
+        <a href="#research">Research Interests</a>  
+        <a href="#publications">Publications</a>  
+        <a href="#teaching">Teaching</a>  
+        <a href="#courses">Current Semester Courses</a>  
     </nav>  
 </header>  
 
@@ -62,6 +74,11 @@
         <p>Discover my journey in academia, explore my research interests, and learn about the courses I teach. Join me in advancing knowledge and inspiring students.</p>  
         <a href="#more" class="btn">Learn More</a>  
         <a href="#contact" class="btn">Contact Me</a>  
+    </div>  
+
+    <div id="about" class="section">  
+        <h3>About Me</h3>  
+        <p>Details about your background and journey would go here.</p>  
     </div>  
 
     <div id="research" class="section">  
@@ -77,6 +94,11 @@
     <div id="teaching" class="section">  
         <h3>Teaching</h3>  
         <p>Details about the courses you teach would go here.</p>  
+    </div>  
+
+    <div id="courses" class="section">  
+        <h3>Current Semester Courses</h3>  
+        <p>List of current semester courses would go here.</p>  
     </div>  
 </div>  
 
