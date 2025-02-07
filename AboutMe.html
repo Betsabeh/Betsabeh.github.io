@@ -60,7 +60,15 @@
         
         .section {  
             margin: 10px 0; /* Reduced margin for sections */  
-        }  
+        } 
+        .profile-image {  
+             width: 150px; /* Adjust to desired size */  
+             height: 150px; /* Keep the height equal to the width */  
+             border-radius: 50%; /* Makes the image round */  
+             object-fit: cover; /* Ensures the image covers the area without distortion */  
+             margin-right: 20px; /* Space between image and text */  
+             border: 3px solid #7a2c38; /* Optional: adds a border for aesthetics */  
+}  
     </style>  
 </head>  
 <body>  
@@ -80,7 +88,7 @@
 <div class="container">  
     <div class="section">  
         <h2>About Me </h2>  
-         <img src="about_me.jpg" alt="Betsabeh Tanoori" style="max-width: 200px; height: auto; border-radius: 10px; margin-bottom: 20px;">  
+        <img src="about_me.jpg" alt="Betsabeh Tanoori" class="profile-image">  
         <p class="bio">I am <strong>Betsabeh Tanoori</strong>, and I completed my PhD in Computer Engineering, specializing in <strong>Artificial Intelligence</strong>, at <strong>Shiraz University</strong> in 2021. My doctoral research focused on <strong>semi-supervised approaches for drug-target interaction identification</strong>, conducted under the supervision of Mansoor Zolghadri Jahromi and the guidance of Dr. Eghbal G Mansoori and Dr.Mohammad Taheri.</p>  
         <p class="bio">In my work, I applied both <strong>classification</strong> and <strong>regression models</strong> to predict drug targets, leveraging the advantages of fusing multiple biological data sources, <strong>transfer learning</strong>, and <strong>semi-supervised learning</strong> techniques.</p>  
         <p class="bio">Additionally, I have experience in <strong>brain volumetry</strong> of MRI images, collaborating with Professor.Zohreh Azimifar and Professor.Serajdean katebi. This research involved classifying brain images using <strong>Support Vector Machines</strong> (SVM) and calculating brain volume.</p>  
