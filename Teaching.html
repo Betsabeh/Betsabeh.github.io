@@ -31,7 +31,7 @@
             margin-left:30 px;  
         }  
         nav a {  
-            margin-right: 100px; /* Ensure space between links */  
+            margin-right: 200px; /* Ensure space between links */  
             text-decoration: none;  
             color: #7a2c38;  
             font-weight: bold;  
@@ -50,30 +50,42 @@
         }  
         .container {  
             padding: 10px; /* Reduced padding in the container */  
-            text-align: center;  
+            text-align: left; 
+        } 
+        .bio {  
+           max-width: 800px;    
+           text-align: justify; /* Justify the text */  
         }  
+        
         .section {  
             margin: 10px 0; /* Reduced margin for sections */  
-        }  
+        } 
+        .profile-image {  
+             width: 250px; /* Adjust to desired size */  
+             height: 250px; /* Keep the height equal to the width */  
+             border-radius: 50%; /* Makes the image round */  
+             object-fit: cover; /* Ensures the image covers the area without distortion */  
+             margin-right: 20px; /* Space between image and text */  
+             border: 3px solid #7a2c38; /* Optional: adds a border for aesthetics */  
+}  
     </style>  
 </head>  
 <body>  
 
 <header>  
-    <h1>BT</h1>  
+    <h1><a href="index.html" color= #7a2c38>BT</a></h1>  
     <nav>  
         <a href="AboutMe.html">About Me</a>  
         <a href="ResearchInterests.html">Research Interests</a>  
         <a href="Publications.html">Publications</a>  
-        <a href="Teaching.html">Teaching</a>   
+        <a href="Teaching.html">Teaching</a>  
         <a href="Interests.html">Interests</a>  
     </nav>  
-</header>  
+</header>   
 
-<div class="container">  
-    <div class="section">  
-        <h2>Teaching</h2>  
+<div class="container" style="display: flex; align-items: flex-start;">  
+ 
 </div>
-</div>
-</body>
+
+</body>  
 </html>
