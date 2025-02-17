@@ -18,7 +18,7 @@
             align-items: center;  
             background-color: white;  
             border-bottom: 5px solid #ccc;  
-            margin-bottom: 20 px; /* Reduce space below the header */  
+            margin-bottom: 20px; /* Corrected space below the header */  
         }  
         h1 {  
             color: #7a2c38;  
@@ -28,7 +28,7 @@
         }  
         nav {  
             display: flex;  
-            margin-left:30 px;  
+            margin-left: 30px; /* Corrected spacing */  
         }  
         nav a {  
             margin-right: 200px; /* Ensure space between links */  
@@ -50,24 +50,23 @@
         }  
         .container {  
             padding: 10px; /* Reduced padding in the container */  
-            text-align: left; 
-        } 
-        .bio {  
-           max-width: 800px;    
-           text-align: justify; /* Justify the text */  
+            text-align: left;  
         }  
-        
+        .bio {  
+            max-width: 800px;  
+            text-align: justify; /* Justify the text */  
+        }  
         .section {  
             margin: 10px 0; /* Reduced margin for sections */  
-        } 
+        }  
         .profile-image {  
-             width: 250px; /* Adjust to desired size */  
-             height: 250px; /* Keep the height equal to the width */  
-             border-radius: 50%; /* Makes the image round */  
-             object-fit: cover; /* Ensures the image covers the area without distortion */  
-             margin-right: 20px; /* Space between image and text */  
-             border: 3px solid #7a2c38; /* Optional: adds a border for aesthetics */  
-        }
+            width: 250px; /* Adjust to desired size */  
+            height: 250px; /* Keep the height equal to the width */  
+            border-radius: 50%; /* Makes the image round */  
+            object-fit: cover; /* Ensures image covers the area without distortion */  
+            margin-right: 20px; /* Space between image and text */  
+            border: 3px solid #7a2c38; /* Optional: adds a border for aesthetics */  
+        }  
         .course-list, .previous-courses {  
             margin: 20px 0;  
             padding: 10px;  
@@ -86,46 +85,40 @@
             padding: 10px;  
             border-radius: 5px;  
             text-align: center;  
-        } 
+        }  
         .class-schedule {  
-    margin: 20px 0;  
-    border: 1px solid #ccc;  
-    border-radius: 8px;  
-    overflow: hidden;  
-}  
-
-.class-schedule table {  
-    width: 100%;  
-    border-collapse: collapse;  
-}  
-
-.class-schedule th, .class-schedule td {  
-    padding: 12px;  
-    text-align: left;  
-    border-bottom: 1px solid #ddd;  
-}  
-
-.class-schedule th {  
-    background-color: #f2f2f2;  
-    font-weight: bold;  
-}  
-
-.class-schedule tr: hover {  
-    background-color: #f1f1f1;  
-}  
-
-.class-schedule td[colspan="2"] {  
-    text-align: center;  
-    font-style: italic;  
-    color: #555;  
-}
- 
+            margin: 20px 0;  
+            border: 1px solid #ccc;  
+            border-radius: 8px;  
+            overflow: hidden;  
+        }  
+        .class-schedule table {  
+            width: 100%;  
+            border-collapse: collapse;  
+        }  
+        .class-schedule th, .class-schedule td {  
+            padding: 12px;  
+            text-align: left;  
+            border-bottom: 1px solid #ddd;  
+        }  
+        .class-schedule th {  
+            background-color: #f2f2f2;  
+            font-weight: bold;  
+        }  
+        .class-schedule tr:hover { /* Fixed hover syntax */  
+            background-color: #f1f1f1;  
+        }  
+        .class-schedule td[colspan="2"] {  
+            text-align: center;  
+            font-style: italic;  
+            color: #555;  
+        }  
     </style>  
 </head>  
 <body>  
 
 <header>  
-    <h1><a href="index.html" color= #7a2c38>BT</a></h1>  
+    <h1><a href="index.html" style="color: #7a2c38;">BT</a></h1> <!-- Fixed color usage -->  
     <nav>  
         <a href="AboutMe.html">About Me</a>  
         <a href="ResearchInterests.html">Research Interests</a>  
@@ -133,92 +126,93 @@
         <a href="Teaching.html">Teaching</a>  
         <a href="Interests.html">Interests</a>  
     </nav>  
-</header>   
+</header>  
 <div class="container" style="display: flex; align-items: flex-start;">  
     <img src="about_me.jpg" alt="Betsabeh Tanoori" class="profile-image">  
     <div class="bio">  
         <h2>My Teaching Interest</h2>  
-    </div>
-</div>
- <section class="current-semester">  
-    <h2>Current Semester Courses</h2>  
-        <div class="course-list">  
-            <ul>  
-                <li>Course 1: Information Retrieval (Undergraduate)</li>  
-                <li>Course 2: Advanced Information Retrieval (Graduate course)</li>  
-                <li>Course 3: Design of Algorithms (Undergraduate course) </li>  
-                <li>Course 4: Computational Intelligence (Undergraduate course)</li>  
-            </ul>  
-        </div> 
- </section>
- <section class="calendar">  
- <h2>Class Schedule</h2>  
-   <div class="class-schedule">  
-    <table>  
-        <thead>  
-            <tr>  
-                <th>Day</th>  
-                <th>Time</th>  
-                <th>Course</th>  
-            </tr>  
-        </thead>  
-        <tbody>  
-            <tr>  
-                <td>Saturday</td>  
-                <td>8:00 - 10:15 AM</td>  
-                <td>Design of Algorithms</td>  
-            </tr>  
-            <tr>  
-                <td>Saturday</td>  
-                <td>10:30 AM - 12:45 PM</td>  
-                <td>Design of Algorithms</td>  
-            </tr>  
-            <tr>  
-                <td>Saturday</td>  
-                <td>1:00 - 3:15 PM</td>  
-                <td>Information Retrieval</td>  
-            </tr>  
-            <tr>  
-                <td>Sunday</td>  
-                <td colspan="2">Study and Research</td>  
-            </tr>  
-            <tr>  
-                <td>Monday</td>  
-                <td>8:00 - 10:15 AM</td>  
-                <td>Design of Algorithms</td>  
-            </tr>  
-            <tr>  
-                <td>Monday</td>  
-                <td>10:30 AM - 2:15 PM</td>  
-                <td>Student Counseling</td>  
-            </tr>  
-            <tr>  
-                <td>Wednesday</td>  
-                <td>8:00 - 10:15 AM</td>  
-                <td>Advanced Information Retrieval</td>  
-            </tr>  
-            <tr>  
-                <td>Thursday</td>  
-                <td colspan="2">No Classes</td>  
-            </tr>  
-            <tr>  
-                <td>Friday</td>  
-                <td colspan="2">Rest Day</td>  
-            </tr>  
-        </tbody>  
-    </table>  
+        <p><!-- Add a brief bio or description here -->Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>  
+    </div>  
 </div>  
-</section>
+<section class="current-semester">  
+    <h2>Current Semester Courses</h2>  
+    <div class="course-list">  
+        <ul>  
+            <li>Course 1: Information Retrieval (Undergraduate)</li>  
+            <li>Course 2: Advanced Information Retrieval (Graduate course)</li>  
+            <li>Course 3: Design of Algorithms (Undergraduate course) </li>  
+            <li>Course 4: Computational Intelligence (Undergraduate course)</li>  
+        </ul>  
+    </div>  
+</section>  
+<section class="calendar">  
+    <h2>Class Schedule</h2>  
+    <div class="class-schedule">  
+        <table>  
+            <thead>  
+                <tr>  
+                    <th>Day</th>  
+                    <th>Time</th>  
+                    <th>Course</th>  
+                </tr>  
+            </thead>  
+            <tbody>  
+                <tr>  
+                    <td>Saturday</td>  
+                    <td>8:00 - 10:15 AM</td>  
+                    <td>Design of Algorithms</td>  
+                </tr>  
+                <tr>  
+                    <td>Saturday</td>  
+                    <td>10:30 AM - 12:45 PM</td>  
+                    <td>Design of Algorithms</td>  
+                </tr>  
+                <tr>  
+                    <td>Saturday</td>  
+                    <td>1:00 - 3:15 PM</td>  
+                    <td>Information Retrieval</td>  
+                </tr>  
+                <tr>  
+                    <td>Sunday</td>  
+                    <td colspan="2">Study and Research</td>  
+                </tr>  
+                <tr>  
+                    <td>Monday</td>  
+                    <td>8:00 - 10:15 AM</td>  
+                    <td>Design of Algorithms</td>  
+                </tr>  
+                <tr>  
+                    <td>Monday</td>  
+                    <td>10:30 AM - 2:15 PM</td>  
+                    <td>Student Counseling</td>  
+                </tr>  
+                <tr>  
+                    <td>Wednesday</td>  
+                    <td>8:00 - 10:15 AM</td>  
+                    <td>Advanced Information Retrieval</td>  
+                </tr>  
+                <tr>  
+                    <td>Thursday</td>  
+                    <td colspan="2">No Classes</td>  
+                </tr>  
+                <tr>  
+                    <td>Friday</td>  
+                    <td colspan="2">Rest Day</td>  
+                </tr>  
+            </tbody>  
+        </table>  
+    </div>  
+</section>  
 <section class="previous-semester">  
     <h2>Previous Semester Courses</h2>  
-        <div class="previous-courses">  
-            <ul>  
-                <li>Course 1: Database Systems</li>  
-                <li>Course 2: Software Engineering</li>  
-                <li>Course 3: Operating Systems</li>  
-                <li>Course 4: Computer Networks</li>  
-            </ul>  
-        </div>  
-    </section>  
+    <div class="previous-courses">  
+        <ul>  
+            <li>Course 1: Database Systems</li>  
+            <li>Course 2: Software Engineering</li>  
+            <li>Course 3: Operating Systems</li>  
+            <li>Course 4: Computer Networks</li>  
+        </ul>  
+    </div>  
+</section>  
 </body>  
 </html>
