@@ -86,7 +86,39 @@
             padding: 10px;  
             border-radius: 5px;  
             text-align: center;  
-        }  
+        } 
+        .class-schedule {  
+    margin: 20px 0;  
+    border: 1px solid #ccc;  
+    border-radius: 8px;  
+    overflow: hidden;  
+}  
+
+.class-schedule table {  
+    width: 100%;  
+    border-collapse: collapse;  
+}  
+
+.class-schedule th, .class-schedule td {  
+    padding: 12px;  
+    text-align: left;  
+    border-bottom: 1px solid #ddd;  
+}  
+
+.class-schedule th {  
+    background-color: #f2f2f2;  
+    font-weight: bold;  
+}  
+
+.class-schedule tr:hover {  
+    background-color: #f1f1f1;  
+}  
+
+.class-schedule td[colspan="2"] {  
+    text-align: center;  
+    font-style: italic;  
+    color: #555;  
+}
  
     </style>  
 </head>  
@@ -120,19 +152,62 @@
         </div> 
  </section>
  <section class="calendar">  
-     <h2>Class Schedule</h2>  
-        <div class="calendar">  
-            <div class="day">Sat<br>8 AM - 10:15 AM<br>Design of Algorithms</div>  
-            <div class="day">Sat<br>10:30 AM - 12:45 PM<br>Design of Algorithms</div> 
-            <div class="day">Sat<br>13:00 PM - 15:15 PM<br>Information Retrieval</div>  
-            <div class="day">Sun<br>Study and Research</div>  
-            <div class="day">Mon<br>8 AM - 10:15 AM<br>Design of Algorithms</div>
-            <div class="day">Mon<br>10:30 AM - 14:15 AM<br>Student Counseling</div> 
-            <div class="day">Tue<br>Study and Research</div>  
-            <div class="day">Wed<br>8 AM - 10:15 AM<br>Advanced Information Retrieval </div>   
-            <div class="day">Thu<br>No Classes</div>  
-            <div class="day">Fri<br>Rest Day</div>   
-        </div>  
+    <h2>Class Schedule</h2>  
+<div class="class-schedule">  
+    <table>  
+        <thead>  
+            <tr>  
+                <th>Day</th>  
+                <th>Time</th>  
+                <th>Course</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr>  
+                <td>Saturday</td>  
+                <td>8:00 - 10:15 AM</td>  
+                <td>Design of Algorithms</td>  
+            </tr>  
+            <tr>  
+                <td>Saturday</td>  
+                <td>10:30 AM - 12:45 PM</td>  
+                <td>Design of Algorithms</td>  
+            </tr>  
+            <tr>  
+                <td>Saturday</td>  
+                <td>1:00 - 3:15 PM</td>  
+                <td>Information Retrieval</td>  
+            </tr>  
+            <tr>  
+                <td>Sunday</td>  
+                <td colspan="2">Study and Research</td>  
+            </tr>  
+            <tr>  
+                <td>Monday</td>  
+                <td>8:00 - 10:15 AM</td>  
+                <td>Design of Algorithms</td>  
+            </tr>  
+            <tr>  
+                <td>Monday</td>  
+                <td>10:30 AM - 2:15 PM</td>  
+                <td>Student Counseling</td>  
+            </tr>  
+            <tr>  
+                <td>Wednesday</td>  
+                <td>8:00 - 10:15 AM</td>  
+                <td>Advanced Information Retrieval</td>  
+            </tr>  
+            <tr>  
+                <td>Thursday</td>  
+                <td colspan="2">No Classes</td>  
+            </tr>  
+            <tr>  
+                <td>Friday</td>  
+                <td colspan="2">Rest Day</td>  
+            </tr>  
+        </tbody>  
+    </table>  
+</div>  
     </section>
 <section class="previous-semester">  
     <h2>Previous Semester Courses</h2>  
