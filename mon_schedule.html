@@ -1,0 +1,183 @@
+<!DOCTYPE html>  
+<html lang="en">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>My Teaching Schedule</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #f7f7f7;  
+        }  
+
+        h1 {  
+            text-align: center;  
+        }  
+
+        .calendar {  
+            width: 300px;  
+            margin: 20px auto;  
+            padding: 20px;  
+            background: white;  
+            border-radius: 8px;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+        }  
+
+        .header {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+        }  
+
+        #monthYear {  
+            text-align: center;  
+        }  
+
+        .days {  
+            display: grid;  
+            grid-template-columns: repeat(7, 1fr);  
+        }  
+
+        .day {  
+            text-align: center;  
+            font-weight: bold;  
+        }  
+
+        .dates {  
+            display: grid;  
+            grid-template-columns: repeat(7, 1fr);  
+            margin-top: 10px;  
+        }  
+
+        .date {  
+            padding: 10px;  
+            cursor: pointer;  
+            text-align: center;  
+            position: relative;  
+        }  
+
+        .event {  
+            background-color: #d3f8d3;  
+            border: 1px solid #a7e6a7;  
+            border-radius: 5px;  
+            margin: 2px;  
+            padding: 10px; /* Increased padding */  
+            cursor: pointer;  
+            font-size: medium; /* Increased font size */  
+            display: none; /* Initially hide events */  
+            position: absolute; /* Position events */  
+            left: 0;  
+            right: 0;  
+            z-index: 10;  
+            top: 100%; /* Position below the date */  
+            white-space: nowrap; /* Prevent text wrapping */  
+        }  
+
+        .date:hover .event {  
+            display: block; /* Show events on hover */  
+        }  
+    </style>  
+</head>  
+
+<body>  
+    <h1>Class Schedule</h1>  
+    <div class="calendar">  
+        <div class="header">  
+            <button id="prev">‹</button>  
+            <h2 id="monthYear"></h2>  
+            <button id="next">›</button>  
+        </div>  
+        <div class="days">  
+            <div class="day">Sun</div>  
+            <div class="day">Mon</div>  
+            <div class="day">Tue</div>  
+            <div class="day">Wed</div>  
+            <div class="day">Thu</div>  
+            <div class="day">Fri</div>  
+            <div class="day">Sat</div>  
+        </div>  
+        <div id="dates" class="dates"></div>  
+    </div>  
+
+    <script>  
+        const events = {  
+            '2025-01-19': ['Student consulting', 'Office Hours 2 PM - 3 PM'],  
+            '2025-02-17': ['Student consulting'],  
+            '2025-02-15': ['Class Introduction at 8 AM'],  
+            '2025-02-19': ['Civil Engineering Conference at 08:00 AM - 12:30 PM'],  
+            '2025-02-27': ['Professors development course at 08:00 AM - 12:30 PM'],   
+          
+            // Add more events here  
+        };  
+
+        const monthYear = document.getElementById('monthYear');  
+        const datesContainer = document.getElementById('dates');  
+        const prevBtn = document.getElementById('prev');  
+        const nextBtn = document.getElementById('next');  
+
+        // Set the initial date to the current date  
+        let date = new Date();  
+
+        function renderCalendar() {  
+            datesContainer.innerHTML = '';  
+            const month = date.getMonth();  
+            const year = date.getFullYear();  
+            monthYear.textContent = date.toLocaleString('default', { month: 'long' }) + ' ' + year;  
+
+            const firstDay = new Date(year, month, 1);  
+            const lastDate = new Date(year, month + 1, 0).getDate();  
+            const firstDayIndex = firstDay.getDay();  
+
+            // Fill initial blanks  
+            for (let i = 0; i < firstDayIndex; i++) {  
+                const blankDay = document.createElement('div');  
+                blankDay.classList.add('date');  
+                datesContainer.appendChild(blankDay);  
+            }  
+
+            // Fill remaining days  
+            for (let i = 1; i <= lastDate; i++) {  
+                const currentDate = new Date(year, month, i);  
+                const dateString = currentDate.toISOString().split('T')[0]; // Get the date in 'YYYY-MM-DD' format  
+
+                const dateElement = document.createElement('div');  
+                dateElement.classList.add('date');  
+                dateElement.textContent = i;  
+
+                // Create a container for events  
+                const eventList = document.createElement('div');  
+                eventList.classList.add('event');  
+
+                if (events[dateString]) {  
+                    events[dateString].forEach(event => {  
+                        const eventElement = document.createElement('div');  
+                        eventElement.classList.add('event');  
+                        eventElement.textContent = event;  
+                        eventList.appendChild(eventElement);  
+                    });  
+                }  
+
+                dateElement.appendChild(eventList);  
+                datesContainer.appendChild(dateElement);  
+            }  
+        }  
+
+        prevBtn.addEventListener('click', () => {  
+            date.setMonth(date.getMonth() - 1);  
+            renderCalendar();  
+        });  
+
+        nextBtn.addEventListener('click', () => {  
+            date.setMonth(date.getMonth() + 1);  
+            renderCalendar();  
+        });  
+
+        // Initial render  
+        renderCalendar();  
+    </script>  
+
+
+</body>  
+
+</html>
